@@ -25,36 +25,39 @@
             <p class="e-address">
               Email Address <span style="color: blue">*</span>
             </p>
-            <input id="email" type="email" required />
+            <input type="email" id="emailInput" oninput="validateEmailInput()">
+            <span id="emailFeedback" style="color: red;"></span>
           </div>
           <div class="b">
-            <p>Query Type <span style="color: blue">*</span></p>
-            <input
-              id="name"
-              class="query"
-              type="text"
-              placeholder=" General Enquiry"
-              required/>
-            <input class="radio" type="radio" name="query"/>
-            <input
-              id="name"
-              class="query"
-              type="text"
-              placeholder="Support Request"
-              required/>
-            <input class="radio1" type="radio" name="query" />
+            <p>Query Type <span style="color: blue">*</span></p>           
+            <input type="radio" name="query" class="radio1"/>
+            <label for="general" class="general-enquiry">General Enquiry</label>
+            <input type="radio" name="query" class="radio"/>
+            <label for="support" class="support-request">Support Request</label>
           </div>
-
           <div class="message">
             <p>Message <span style="color: blue">*</span></p>
-            <input id="email" type="email" class="mes" required />
+            <input id="email" type="email" class="mes" />
           </div>
           <div class="check-box">
             <input type="checkbox" />I consent to being contacted by the team
           </div>
           <button type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
+           </form>
+          </div>
+        </div>     
+     
+    <script>   
+  function validateEmailInput() 
+  {
+  const emailInput = document.getElementById('emailInput').value;
+  const feedbackElement = document.getElementById('emailFeedback');
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (emailRegex.test(emailInput)) {
+    feedbackElement.textContent = ""; // Email is valid
+  } else {
+    feedbackElement.textContent = "Please enter a valid email address.";
+  }}
+    </script>   
   </body>
 </html>
