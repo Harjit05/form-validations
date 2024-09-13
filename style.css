@@ -30,12 +30,12 @@ body{
         float: left;
 }
 .query-type{
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     /* background: orange; */
 }
 .b .query{
-    width: 45%;
+    width: 50%;
 }
 .a p{
     width: 30%;
