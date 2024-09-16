@@ -62,9 +62,7 @@ input[type='email']:focus
 .mes{
     height: 90px;
 }
-/* .query-type{
-    width: 50%;
-} */
+
 button{
     background:rgb(5, 89, 65);
     color:#fff;
@@ -90,7 +88,7 @@ button{
 .check-box{
     width: 99%;
     height: 70%;
-    margin-top: 85px;
+    margin-top: 100px;
     /* background:red ; */
     clear: both;
 }

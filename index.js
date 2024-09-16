@@ -1,3 +1,4 @@
+
 function validateEmailInput() 
   {
   const emailInput = document.getElementById('emailInput').value;
@@ -8,16 +9,43 @@ function validateEmailInput()
   } else {
     feedbackElement.textContent = "Please enter a valid email address.";
   }}
-  function data(){
-    var a=document.getElementById("n1").value;
-    var b=document.getElementById("n2").value;
-    var c=document.getElementById("n3").value;
-    if(a=="" || b=="" || c=="")
-    {
-      alert("All fields are mandatory");
-      return false;
-    }else
-    {
-       true;
-    }
+
+  function seterror(id,error){
+    element=document.getElementById(id);
+    element.getElementsByClassName("formerror")[0].innerHTML=error;
   }
+
+  function validName(){
+    var returnval=true;
+    var name= document.forms['myForm']['fname'].value;
+    if(name.length<5){
+      seterror("name", "Length of name is too short");
+      returnval=false;
+    }
+    // console.log(name);
+    return returnval; 
+}
+
+function validName(){
+  var returnval=true;
+  var name1= document.forms['myForm']['lname'].value;
+  if(name1.length<5){
+    seterror("name1", "Length of name is too short");
+    returnval=false;
+  }
+  return returnval; 
+}
+
+function validName(){
+  var returnval=true;
+  var message1= document.forms['myForm']['mes1'].value;
+  if(message1.length>100){
+    seterror("message1", "<br>Message should less than 100 characters");
+    returnval=false;
+  }
+  return returnval; 
+}
+
+
+  
+    
