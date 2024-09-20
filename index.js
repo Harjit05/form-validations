@@ -16,35 +16,34 @@ function validateEmailInput()
   }
 
   function validName(){
-    var returnval=true;
+    var returnval1=true;
     var name= document.forms['myForm']['fname'].value;
     if(name.length<5){
       seterror("name", "Length of name is too short");
-      returnval=false;
+      returnval1=false;
     }
-    // console.log(name);
-    return returnval; 
+    return returnval1; 
 }
 
-function validName(){
-  var returnval=true;
-  var name1= document.forms['myForm']['lname'].value;
-  if(name1.length<5){
-    seterror("name1", "Length of name is too short");
-    returnval=false;
-  }
-  return returnval; 
-}
+// function validName(){
+//   var returnval=true;
+//   var name1= document.forms['myForm']['lname'].value;
+//   if(name1.length<5){
+//     seterror("name1", "Length of name is too short");
+//     returnval=false;
+//   }
+//   return returnval; 
+// }
 
-function validName(){
-  var returnval=true;
-  var message1= document.forms['myForm']['mes1'].value;
-  if(message1.length>100){
-    seterror("message1", "<br>Message should less than 100 characters");
-    returnval=false;
-  }
-  return returnval; 
-}
+// function validName(){
+//   var returnval2=true;
+//   var message1= document.forms['myForm']['mes1'].value;
+//   if(message1.length>100){
+//     seterror("message1", "<br>Message should less than 100 characters");
+//     returnval2=false;
+//   }
+//   return returnval2; 
+// }
 
 
   
